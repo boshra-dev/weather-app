@@ -1,0 +1,56 @@
+.chart-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  height: 300px;
+}
+
+.weather-app .chart-container {
+  margin-top: 40px;
+}
+
+.skeleton-chart {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .timeOnXaxis {
+    font-size: 0.9rem;
+  }
+
+  .imgOnXaxis {
+    width: 65px;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeOnXaxis {
+    font-size: 0.7rem;
+  }
+
+  .imgOnXaxis {
+    width: 45px;
+  }
+}
+
+@media (max-width: 440px) {
+  .timeOnXaxis {
+    font-size: 0.28rem;
+    font-weight: 700;
+  }
+
+  .imgOnXaxis {
+    width: 35px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .timeOnXaxis {
+    font-size: 1.2rem;
+  }
+
+  .imgOnXaxis {
+    width: 74px;
+  }
+}

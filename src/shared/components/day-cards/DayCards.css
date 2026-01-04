@@ -1,0 +1,67 @@
+.day-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  width: 80%;
+  gap: 10px;
+
+  margin: 10px auto;
+  min-height: 167.2px;
+}
+
+.day-cards-container .day-card {
+  background-color: #c3f1ff;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: auto;
+  min-height: 160px !important;
+}
+
+.day-cards-container .day-card .day {
+  font-weight: 700;
+}
+
+.day-cards-container .day-card .min-max {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.day-cards-container .day-card .min-max div {
+  min-width: 40px;
+  text-align: center;
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .day-cards-container .day-card .day {
+    font-size: 18px;
+  }
+
+  .day-cards-container .day-card img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .day-cards-container .day-card .day {
+    font-size: 16px;
+  }
+
+  .day-cards-container .day-card img {
+    width: 60px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .day-cards-container .day-card .day {
+    font-size: 20px;
+  }
+
+  .day-cards-container .day-card img {
+    width: 100px;
+  }
+}

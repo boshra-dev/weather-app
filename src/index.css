@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+#root {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

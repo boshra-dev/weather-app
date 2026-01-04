@@ -1,0 +1,296 @@
+:root {
+  --bg-main: #daebe6;
+  --text-main: #1a535c;
+  --accent: #4ecdc4;
+  --secondary: #6b8e8a;
+}
+
+.today-details-container {
+  width: 100%;
+  background-color: var(--bg-main);
+  padding: 2rem;
+  height: auto;
+  min-height: auto;
+  overflow: visible;
+}
+
+.today-info {
+  width: 100%;
+
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.today-info .day-date {
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.max-min-temp {
+  color: var(--accent);
+}
+
+.desc {
+  color: var(--secondary);
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.secondary-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  align-items: stretch;
+  gap: 1rem;
+  margin-top: 8px;
+}
+
+.secondary-info .info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5a7c78;
+  background-color: #e5fbfa;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 15px;
+}
+
+.secondary-info-value {
+  font-weight: 600;
+  color: #2a9d8f;
+}
+
+.animation-container {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.animation-container div {
+  width: 100%;
+}
+
+hr {
+  color: #c8e1db;
+  opacity: 0.6;
+  height: 1px;
+}
+
+.today-details-container .chart-container {
+  width: 100%;
+}
+
+.today-charts-cards {
+  margin-top: 30px;
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.max-min-temp {
+  font-weight: 600;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.day-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.day {
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.more-info {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.day-date span {
+  line-height: 1.2em;
+}
+
+.main-info .img-container img {
+  width: 100%;
+}
+
+.today-details-container .day-cards-container {
+  width: 90%;
+}
+
+@media (max-width: 1163px) {
+  .secondary-info .info-container {
+    justify-content: space-around;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .day-date {
+    font-size: 28px;
+    margin-bottom: 16px;
+    min-width: 310px;
+    height: 37px;
+  }
+
+  .secondary-info div {
+    font-size: 22px;
+  }
+
+  .main-info .img-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .animation-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .today-info .max-min-temp {
+    width: 140px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .today-info .desc {
+    width: 135px;
+    height: 27px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .today-details-container {
+    padding: 1rem;
+  }
+
+  .today-info {
+    padding: 1.25rem;
+  }
+
+  .day-date {
+    font-size: 21px;
+    margin-bottom: 12px;
+    min-width: 255px;
+    height: 32px;
+  }
+
+  .secondary-info div {
+    font-size: 16px;
+  }
+
+  .main-info .img-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .animation-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .today-charts-cards {
+    padding: 1rem;
+  }
+
+  .today-info .max-min-temp {
+    width: 205px;
+    height: 23px;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .today-info .desc {
+    width: 125px;
+    height: 23px;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 460px) {
+  .main-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-main-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 440px) {
+  .secondary-info {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .today-charts-cards .day-cards-container .day-card .day {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1025px) {
+  .day-date {
+    font-size: 36px;
+    margin-bottom: 20px;
+    min-width: 380px;
+    height: 50px;
+  }
+
+  .secondary-info div {
+    font-size: 28px;
+  }
+
+  .main-info .img-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .animation-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .main-info {
+    padding-right: 50px;
+  }
+
+  .today-info .max-min-temp {
+    width: 175px;
+    height: 40px;
+    margin-bottom: 18px;
+    font-size: 28px;
+  }
+
+  .today-info .desc {
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+  }
+}
