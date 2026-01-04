@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 🌤 Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple, responsive weather app built with React.
 
-## Available Scripts
+I wanted something clean and practical, so I focused on real-world usage and improving my UI and layout skills along the way.
 
-In the project directory, you can run:
+The app shows current conditions, daily forecasts, and hourly data with charts and subtle animations to make the experience feel more alive.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##  ✨ Features
+- Search by city name
+- GPS-based location detection
+- Manual city search as a fallback when location access is denied
+- Clear location-permission handling:
+    - If the user denies location access, the app gracefully switches to a manual search flow
+    - A dedicated UI explains why location is needed and allows the user to continue without it
+- Current, daily, and hourly forecasts
+- Detailed daily breakdown (every 3 hours)
+- Temperature, humidity, wind, and rain probability
+- Interactive weather charts
+- Search suggestions for faster input
+- Fully unified search flow used across all pages
+- Consistent error handling with a single unified error design
+- Graceful handling of:
+   -Offline mode
+   -Denied location permissions
+   -Request timeouts 
+   -Invalid city names with a clear message and expressive visual feedback
+   -Empty search input with simple inline validation and a red border highlight 
+   -With clear messages, short explanations, and visual illustrations
+- Image preloading with smooth fade-in transitions
+- Safe page refresh (F5) without breaking routing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠 Tech Stack
+- React
+- Context API
+- Custom Hooks
+- Axios
+- Recharts
+- CSS (Flexbox & Grid)
+- Lottie Animations
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🎨 UX Notes
+- Card-based layouts for daily and hourly forecasts to keep information easy to scan
+- Visual weather icons to make forecasts understandable at a glance
+- A dedicated fallback UI for denied location access, guiding users toward manual search instead of blocking the experience
+- Thoughtful spacing and layout scaling across screen sizes
+- Extra attention to small UI details like preloading and transitions to create a smoother experience
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚠️ Known Issue
+- On some mobile and tablet screens with large viewport heights, long content may not be fully visible.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- This issue comes from complex interactions between Flexbox, Grid, and dynamic content height.
+- A layout refactor is planned to improve long-content handling.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🎯 Why I Built This
+To practice and improve:
+- Feature-based React architecture
+- State management with Context
+- Responsive UI problem-solving
+- Designing user-friendly fallback flows
+- Debugging layout issues across different devices
+- Working with real APIs and async data
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Future Improvements
+- Refactor layout containers for better long-content handling
+- Improve scrolling behavior on mobile and tablet
+- Add more subtle UI animations
+- Accessibility and performance improvements
+- Built as part of my ongoing frontend learning journey.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built as part of my ongoing frontend learning journey.
