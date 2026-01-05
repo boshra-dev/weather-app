@@ -45,6 +45,13 @@ The app shows current conditions, daily forecasts, and hourly data with charts a
 
 ---
 
+## 🔐 Environment Variables
+- This project uses environment variables to store API keys securely.
+
+- API keys are not included in the repository and are loaded via .env files.
+
+---
+
 ## 🎨 UX Notes
 - Card-based layouts for daily and hourly forecasts to keep information easy to scan
 - Visual weather icons to make forecasts understandable at a glance
