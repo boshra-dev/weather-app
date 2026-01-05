@@ -82,4 +82,9 @@ To practice and improve:
 
 ---
 
+## 🎥 Demo
+https://github.com/boshra-dev/weather-app/blob/main/weather-app-demo.mp4
+
+---
+
 Built as part of my ongoing frontend learning journey.
