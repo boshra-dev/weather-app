@@ -12,6 +12,8 @@ const WeatherDetails = memo(function WeatherDetails({
 }) {
   const weatherDesc = currentDayDetails?.data?.weather[0];
   const weatherDetails = currentDayDetails?.data?.main;
+  const safeTemp = (temp) =>
+    Number.isFinite(temp) ? getTempInCelsius(temp) : null;
   return (
     <div className="content">
       <div
@@ -47,9 +49,11 @@ const WeatherDetails = memo(function WeatherDetails({
             <SkeletonBlock
               className={"skeleton-text"}
               isLoading={isLoading}
-              showContent={showContent}
+              showContent={showContent && Number.isFinite(weatherDetails?.temp)}
             >
-              {getTempInCelsius(weatherDetails?.temp)}°C
+              {Number.isFinite(weatherDetails?.temp)
+                ? `${safeTemp(weatherDetails?.temp)}°C`
+                : null}
             </SkeletonBlock>
           </div>
           <div className="weather-desc">
@@ -65,19 +69,27 @@ const WeatherDetails = memo(function WeatherDetails({
             <SkeletonBlock
               className={"skeleton-text"}
               isLoading={isLoading}
-              showContent={showContent}
+              showContent={
+                showContent && Number.isFinite(weatherDetails?.feels_like)
+              }
             >
-              Feels-like {getTempInCelsius(weatherDetails?.feels_like)}°
+              {Number.isFinite(weatherDetails?.feels_like)
+                ? `Feels-like ${safeTemp(weatherDetails?.feels_like)}°`
+                : null}
             </SkeletonBlock>
           </div>
           <div className="max-min-temp">
             <SkeletonBlock
               className={"skeleton-text"}
               isLoading={isLoading}
-              showContent={showContent}
+              showContent={
+                showContent &&
+                Number.isFinite(weatherDetails?.temp_max) &&
+                Number.isFinite(weatherDetails?.temp_min)
+              }
             >
-              Max {getTempInCelsius(weatherDetails?.temp_max)}° | Min{" "}
-              {getTempInCelsius(weatherDetails?.temp_min)}°
+              Max {safeTemp(weatherDetails?.temp_max)}° | Min{" "}
+              {safeTemp(weatherDetails?.temp_min)}°
             </SkeletonBlock>
           </div>
         </div>
