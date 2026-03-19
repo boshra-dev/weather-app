@@ -90,7 +90,12 @@ To practice and improve:
 ---
 
 ## 🎥 Demo
-https://github.com/boshra-dev/weather-app/blob/main/weather-app-demo.mp4
+<div align="center">
+  <h3>🎬 Interactive Demo</h3>
+  <video src="https://github.com/user-attachments/assets/5d1c0510-a9f4-46b3-8331-a69a93847d2f" width="100%" controls autoplay muted loop>
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ---
 
